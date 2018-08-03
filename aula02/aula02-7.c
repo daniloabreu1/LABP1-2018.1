@@ -1,4 +1,5 @@
 #include <stdio.h>
 main(){
-    printf("\a\tTEXTO\\\'");
+    printf("\a\tTEXTO\\\'\n");
+    printf("%% \"");
 }
