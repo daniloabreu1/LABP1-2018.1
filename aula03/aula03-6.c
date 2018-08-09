@@ -1,9 +1,8 @@
 #include <stdio.h>
 main(){
-    int n1, n2, n3;
-    printf("DIGITE TRES NUMEROS INTEIROS ");
-    scanf("%d %d %d", &n1, &n2, &n3);
-    printf("%d => %c\n",n1, n1);
-    printf("%d => %c\n",n2, n2);
-    printf("%d => %c\n",n3, n3);
+    int n1;
+    printf("DIGITE UM NUMERO INTEIRO ");
+    scanf("%d", &n1);
+    printf("%d EH O ANTECESSOR DE %d\n",n1-1, n1);
+    printf("%d EH O SUCESSOR DE %d\n",n1+1, n1);
 }
