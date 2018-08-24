@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <windows.h>
 main(){
     int min,max,i;
     printf("min: ");
