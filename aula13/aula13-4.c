@@ -1,26 +1,26 @@
 #include <stdio.h>
-#define DIM 4
+#define DIM 5
 void getValores(int m[DIM][DIM]){
     int i,j;
     putchar('\n');
     for(i=0;i<DIM;i++){
         for(j=0;j<DIM;j++){
-            printf("Valor [%d][%d] >>> ",i,j);
+            printf("Valor [%d][%d] >>> ",i+1,j+1);
             scanf("%d",&m[i][j]);
         }
     }
 }
-void matrizMaior(int a[DIM][DIM],int b[DIM][DIM],int c[DIM][DIM]){
+void buscaValor(int m[DIM][DIM],int n){
     int i,j;
     for(i=0;i<DIM;i++){
         for(j=0;j<DIM;j++){
-            if(a[i][j]>=b[i][j]){
-                c[i][j]=a[i][j];
-            }else{
-                c[i][j]=b[i][j];
+            if(m[i][j]==n){
+                printf("\nIndice [%d][%d]\n",i,j);
+                return;
             }
         }
     }
+    printf("\nNao encontrado\n");
 }
 void imprimirMatriz(int m[DIM][DIM]){
     int i,j;
@@ -32,13 +32,11 @@ void imprimirMatriz(int m[DIM][DIM]){
         putchar('\n');
     }
 }
-
 main(){
-    int a[DIM][DIM],b[DIM][DIM],c[DIM][DIM];
+    int a[DIM][DIM],n;
     getValores(a);
-    getValores(b);
-    matrizMaior(a,b,c);
     imprimirMatriz(a);
-    imprimirMatriz(b);
-    imprimirMatriz(c);
+    printf("\nN >>> ");
+    scanf("%d",&n);
+    buscaValor(a,n);
 }
