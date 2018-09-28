@@ -24,6 +24,8 @@ int subString(char palavra[21],char sub[21]){
                     j++;
                 }else{
                     j=0;
+                    r=0;
+                    i--;
                     break;
                 }
             }
