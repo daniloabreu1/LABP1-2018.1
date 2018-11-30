@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 typedef struct {
     char nome[31];
     char telefone[18];
@@ -165,16 +164,12 @@ int push(LISTA *li, FILE *arq){
     }
     return 0;
 }
-void gravarContato(FILE *arq, CONTATO c){
-    if(arq!=NULL)
-        fwrite(&c, sizeof(CONTATO),1,arq);
-}
 
 void gravarLista(FILE *arq, LISTA *li){
     if(arq!=NULL){
             ELEM* aux = li->inicio;
              while(aux != NULL){
-                 gravarContato(arq,aux->dados);
+                 fwrite(&aux->dados, sizeof(CONTATO),1,arq);
                  aux = aux->prox;
             }
     }
@@ -182,7 +177,6 @@ void gravarLista(FILE *arq, LISTA *li){
 }
 FILE *arquivo(char *s){
     return fopen("dados.dat",s);
-
 }
 
 void novoContato(CONTATO *c){
