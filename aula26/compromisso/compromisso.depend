@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1543589832 source:d:\google drive\trabalho\uepb\2018-1\labp1\códigos\aula26\compromisso\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
+1543590008 d:\google drive\trabalho\uepb\2018-1\labp1\códigos\aula26\compromisso\lista.h
+
+1543589220 source:d:\google drive\trabalho\uepb\2018-1\labp1\códigos\aula26\compromisso\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
